@@ -9,6 +9,7 @@ import UserContext from './contexts/current-user-context';
 import { checkForLoggedInUser } from './adapters/auth-adapter';
 import UsersPage from './pages/Users';
 import UserPage from './pages/User';
+import Bingo from './pages/Bingo';
 
 export default function App() {
   const { setCurrentUser } = useContext(UserContext);
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/bingo' element={<Bingo/>}/>
         <Route path='/sign-up' element={<SignUpPage />} />
         <Route path='/users' element={<UsersPage />} />
         <Route path='/users/:id' element={<UserPage />} />
